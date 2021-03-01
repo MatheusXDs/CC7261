@@ -10,14 +10,13 @@ int main() {
       }
       resultado=1;
   }
-  printf("%i\n",resultado);
+
 
   //  Verifica o tempo de execução.
   clock_t tempo;
   tempo = clock();
-
-    // código de teste
-  for(int i = 0; i < 999999999; ++i){}
+  printf("%i\n",resultado);
+  
   printf("Tempo:%f\n",(clock() - tempo) / (double)CLOCKS_PER_SEC);
 
   return 0;
