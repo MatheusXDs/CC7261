@@ -25,14 +25,33 @@ int TestaPrimo(int n) {
 }
 
 int main(){
-  int n = 2147483647;
-  printf("%i\n",TestaPrimo(n));
+  int n = 2147483647, i;
+  float vetor[30], soma, media, dp;
+  //for(i=0 ; i<30 ; i++){
 
-  //  Verifica o tempo de execução.
-  clock_t tempo;
-  tempo = clock();
+    //  Verifica o tempo de execução.
+    clock_t tempo;
+    tempo = clock();
+    printf("%i\n", TestaPrimo(n));
+    
+    printf("%f\n",(clock() - tempo)*1000 / (double)CLOCKS_PER_SEC);
+    //vetor[i] = ((clock() - tempo)*1000 / (double)CLOCKS_PER_SEC);
+  }
 
-    // código de teste
-  for(int i = 0; i < 999999999; ++i){}
-  printf("Tempo:%f\n",(clock() - tempo) / (double)CLOCKS_PER_SEC);
+//  Calculo para o Desvio Padrão
+/*
+  for(i=0 ; i<30 ; i++){
+    media += vetor[i];
+
+  }
+  media = media/30;
+  for(i=0 ; i<30 ; i++){
+    soma+= pow(vetor[i] - media,2);
+  }
+
+  dp = sqrt(soma/30);
+
+  printf("Desvio:%f", dp);
+
 }
+*/
