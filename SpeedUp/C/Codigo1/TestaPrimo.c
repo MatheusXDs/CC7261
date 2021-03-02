@@ -8,6 +8,7 @@
 
 #include "TestaPrimo.h"
 #include <time.h>
+#include <time.h>
 
 
 int TestaPrimo(int n) {
