@@ -21,14 +21,21 @@ int ehPrimo(int num) {
 }
 
 int main() {
-  printf("%i\n",ehPrimo(7));
+  float vetor[30], media;
+  printf("1 para primo 0 para não primo");
 
-  //  Verifica o tempo de execução.
+  for(int i=0 ; i < 30 ; i++){
+
   clock_t tempo;
   tempo = clock();
-  printf("%i\n",ehPrimo(2147483647));
+  printf("%i\n",ehPrimo(7));
 
-  printf("Tempo:%f\n",(clock() - tempo) / (double)CLOCKS_PER_SEC);
+  printf("Tempo:%f\n",(clock() - tempo)*1000 / (double)CLOCKS_PER_SEC);
+  vetor[i] = ((clock() - tempo)*1000 / (double)CLOCKS_PER_SEC);
+  media += vetor[i];
+  }
 
+  media = media/30;
+  printf("Media: %f", media);
   return 0;
 }
