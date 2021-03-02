@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <time.h>
+
 int ehDivisaoExata(int dividendo, int divisor) {
     return (dividendo % divisor) == 0;
 }
@@ -18,7 +21,7 @@ int ehPrimo(int num) {
 }
 
 int main() {
-  printf("%i\n",ehPrimo(2147483647));
+  printf("%i\n",ehPrimo(7));
 
   //  Verifica o tempo de execução.
   clock_t tempo;
